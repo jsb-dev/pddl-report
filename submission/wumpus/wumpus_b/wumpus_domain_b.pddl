@@ -36,15 +36,18 @@
                 (wumpus ?to)
                 (dead ?agent))
             (when
-                (exists (?adj - square)
+                (exists
+                    (?adj - square)
                     (and (adj ?to ?adj) (gold ?adj)))
                 (glitter ?to))
             (when
-                (exists (?adj - square)
+                (exists
+                    (?adj - square)
                     (and (adj ?to ?adj) (pit ?adj)))
                 (breeze ?to))
             (when
-                (exists (?adj - square)
+                (exists
+                    (?adj - square)
                     (and (adj ?to ?adj) (wumpus ?adj)))
                 (stench ?to))
         )
@@ -53,7 +56,8 @@
         :parameters (?agent - who ?gold - what ?where - square)
         :precondition (and
             (at ?agent ?where)
-            (exists (?adj - square)
+            (exists
+                (?adj - square)
                 (and (adj ?where ?adj) (gold ?adj)))
             (not (dead ?agent))
         )
