@@ -1,0 +1,27 @@
+
+
+task contains conditional effects. turning off state domination.
+
+ --- OK.
+ Match tree built with 72 nodes.
+
+PDDL problem description loaded: 
+	Domain: WUMPUS_DOMAIN_B
+	Problem: WUMPUS_PROBLEM_B
+	#Actions: 72
+	#Fluents: 76
+Goals found: 3
+Goals_Edges found: 5
+Starting search with 1-BFWS...
+--[2 / 0]--
+--[2 / 3]--
+--[2 / 5]--
+--[2 / 9]--
+--[2 / 10]--
+--[0 / 0]--
+--[0 / 4]--
+Total time: 0.000187
+Nodes generated during search: 49
+Nodes expanded during search: 18
+Plan found with cost: 7
+Fast-BFS search completed in 0.000187 secs

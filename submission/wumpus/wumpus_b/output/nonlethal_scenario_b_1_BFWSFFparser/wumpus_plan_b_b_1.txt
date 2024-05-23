@@ -1,0 +1,294 @@
+  (:action move
+    :parameters (agent sq-1-1 sq-2-1)
+    :precondition
+      (and
+        (adj sq-1-1 sq-2-1)
+        (not
+          (pit sq-2-1)
+        )
+        (at agent sq-1-1)
+        (not
+          (dead agent)
+        )
+        (not
+          (wumpus sq-2-1)
+        )
+      )
+    :effect
+      (and
+        (not
+          (at agent sq-1-1)
+        )
+        (at agent sq-2-1)
+        (visited sq-2-1)
+        (when
+          (pit sq-2-1)
+          (dead agent)
+        )
+        (when
+          (wumpus sq-2-1)
+          (dead agent)
+        )
+        (when
+          (gold sq-2-1)
+          (glitter sq-2-1)
+        )
+        (when
+          (exists ?adj and)
+          (breeze sq-2-1)
+        )
+        (when
+          (exists ?adj and)
+          (stench sq-2-1)
+        )
+      )
+  )
+
+    (:action move
+    :parameters (agent sq-2-1 sq-2-2)
+    :precondition
+      (and
+        (adj sq-2-1 sq-2-2)
+        (not
+          (pit sq-2-2)
+        )
+        (at agent sq-2-1)
+        (not
+          (dead agent)
+        )
+        (not
+          (wumpus sq-2-2)
+        )
+      )
+    :effect
+      (and
+        (not
+          (at agent sq-2-1)
+        )
+        (at agent sq-2-2)
+        (visited sq-2-2)
+        (when
+          (pit sq-2-2)
+          (dead agent)
+        )
+        (when
+          (wumpus sq-2-2)
+          (dead agent)
+        )
+        (when
+          (gold sq-2-2)
+          (glitter sq-2-2)
+        )
+        (when
+          (exists ?adj and)
+          (breeze sq-2-2)
+        )
+        (when
+          (exists ?adj and)
+          (stench sq-2-2)
+        )
+      )
+  )
+
+    (:action move
+    :parameters (agent sq-2-2 sq-2-3)
+    :precondition
+      (and
+        (adj sq-2-2 sq-2-3)
+        (not
+          (pit sq-2-3)
+        )
+        (at agent sq-2-2)
+        (not
+          (dead agent)
+        )
+        (not
+          (wumpus sq-2-3)
+        )
+      )
+    :effect
+      (and
+        (not
+          (at agent sq-2-2)
+        )
+        (at agent sq-2-3)
+        (visited sq-2-3)
+        (when
+          (pit sq-2-3)
+          (dead agent)
+        )
+        (when
+          (wumpus sq-2-3)
+          (dead agent)
+        )
+        (when
+          (gold sq-2-3)
+          (glitter sq-2-3)
+        )
+        (when
+          (exists ?adj and)
+          (breeze sq-2-3)
+        )
+        (when
+          (exists ?adj and)
+          (stench sq-2-3)
+        )
+      )
+  )
+
+    (:action take
+    :parameters (agent the-gold sq-2-3)
+    :precondition
+      (and
+        (at agent sq-2-3)
+        (glitter sq-2-3)
+        (not
+          (dead agent)
+        )
+      )
+    :effect
+      (and
+        (have agent the-gold)
+        (not
+          (glitter sq-2-3)
+        )
+      )
+  )
+
+    (:action move
+    :parameters (agent sq-2-3 sq-2-2)
+    :precondition
+      (and
+        (adj sq-2-3 sq-2-2)
+        (not
+          (pit sq-2-2)
+        )
+        (at agent sq-2-3)
+        (not
+          (dead agent)
+        )
+        (not
+          (wumpus sq-2-2)
+        )
+      )
+    :effect
+      (and
+        (not
+          (at agent sq-2-3)
+        )
+        (at agent sq-2-2)
+        (visited sq-2-2)
+        (when
+          (pit sq-2-2)
+          (dead agent)
+        )
+        (when
+          (wumpus sq-2-2)
+          (dead agent)
+        )
+        (when
+          (gold sq-2-2)
+          (glitter sq-2-2)
+        )
+        (when
+          (exists ?adj and)
+          (breeze sq-2-2)
+        )
+        (when
+          (exists ?adj and)
+          (stench sq-2-2)
+        )
+      )
+  )
+
+    (:action move
+    :parameters (agent sq-2-2 sq-2-1)
+    :precondition
+      (and
+        (adj sq-2-2 sq-2-1)
+        (not
+          (pit sq-2-1)
+        )
+        (at agent sq-2-2)
+        (not
+          (dead agent)
+        )
+        (not
+          (wumpus sq-2-1)
+        )
+      )
+    :effect
+      (and
+        (not
+          (at agent sq-2-2)
+        )
+        (at agent sq-2-1)
+        (visited sq-2-1)
+        (when
+          (pit sq-2-1)
+          (dead agent)
+        )
+        (when
+          (wumpus sq-2-1)
+          (dead agent)
+        )
+        (when
+          (gold sq-2-1)
+          (glitter sq-2-1)
+        )
+        (when
+          (exists ?adj and)
+          (breeze sq-2-1)
+        )
+        (when
+          (exists ?adj and)
+          (stench sq-2-1)
+        )
+      )
+  )
+
+    (:action move
+    :parameters (agent sq-2-1 sq-1-1)
+    :precondition
+      (and
+        (adj sq-2-1 sq-1-1)
+        (not
+          (pit sq-1-1)
+        )
+        (at agent sq-2-1)
+        (not
+          (dead agent)
+        )
+        (not
+          (wumpus sq-1-1)
+        )
+      )
+    :effect
+      (and
+        (not
+          (at agent sq-2-1)
+        )
+        (at agent sq-1-1)
+        (visited sq-1-1)
+        (when
+          (pit sq-1-1)
+          (dead agent)
+        )
+        (when
+          (wumpus sq-1-1)
+          (dead agent)
+        )
+        (when
+          (gold sq-1-1)
+          (glitter sq-1-1)
+        )
+        (when
+          (exists ?adj and)
+          (breeze sq-1-1)
+        )
+        (when
+          (exists ?adj and)
+          (stench sq-1-1)
+        )
+      )
+  )
