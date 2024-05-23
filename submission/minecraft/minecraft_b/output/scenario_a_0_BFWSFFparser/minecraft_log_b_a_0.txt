@@ -1,27 +1,31 @@
  --- OK.
- Match tree built with 247 nodes.
+ Match tree built with 58 nodes.
 
 PDDL problem description loaded: 
 	Domain: MINECRAFT_DOMAIN_B
 	Problem: MINECRAFT_PROBLEM_B
-	#Actions: 247
-	#Fluents: 28
+	#Actions: 58
+	#Fluents: 47
 Goals found: 3
 Goals_Edges found: 3
 Starting search with 1-BFWS...
 --[3 / 0]--
---[3 / 1]--
+--[3 / 2]--
+--[3 / 3]--
 --[2 / 0]--
---[2 / 1]--
---[2 / 2]--
+--[2 / 4]--
+--[2 / 5]--
 --[1 / 0]--
---[1 / 1]--
---[1 / 2]--
---[1 / 3]--
+--[1 / 4]--
+--[1 / 5]--
+--[1 / 6]--
+--[1 / 7]--
+--[1 / 8]--
+--[1 / 9]--
 --[0 / 0]--
---[0 / 1]--
-Total time: 0.000206999
-Nodes generated during search: 89
-Nodes expanded during search: 24
-Plan found with cost: 6
-Fast-BFS search completed in 0.000206999 secs
+--[0 / 4]--
+Total time: 0.000260001
+Nodes generated during search: 110
+Nodes expanded during search: 36
+Plan found with cost: 13
+Fast-BFS search completed in 0.000260001 secs

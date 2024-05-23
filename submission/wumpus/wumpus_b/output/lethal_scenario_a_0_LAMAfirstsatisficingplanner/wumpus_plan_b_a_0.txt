@@ -30,7 +30,7 @@
           (dead agent)
         )
         (when
-          (gold sq-1-2)
+          (exists ?adj and)
           (glitter sq-1-2)
         )
         (when
@@ -99,7 +99,7 @@
           (dead agent)
         )
         (when
-          (gold sq-1-3)
+          (exists ?adj and)
           (glitter sq-1-3)
         )
         (when
@@ -113,58 +113,12 @@
       )
   )
 
-    (:action move
-    :parameters (agent sq-1-3 sq-2-3)
-    :precondition
-      (and
-        (adj sq-1-3 sq-2-3)
-        (not
-          (pit sq-2-3)
-        )
-        (at agent sq-1-3)
-        (not
-          (dead agent)
-        )
-        (not
-          (wumpus sq-2-3)
-        )
-      )
-    :effect
-      (and
-        (not
-          (at agent sq-1-3)
-        )
-        (at agent sq-2-3)
-        (visited sq-2-3)
-        (when
-          (pit sq-2-3)
-          (dead agent)
-        )
-        (when
-          (wumpus sq-2-3)
-          (dead agent)
-        )
-        (when
-          (gold sq-2-3)
-          (glitter sq-2-3)
-        )
-        (when
-          (exists ?adj and)
-          (breeze sq-2-3)
-        )
-        (when
-          (exists ?adj and)
-          (stench sq-2-3)
-        )
-      )
-  )
-
     (:action take
-    :parameters (agent the-gold sq-2-3)
+    :parameters (agent the-gold sq-1-3)
     :precondition
       (and
-        (at agent sq-2-3)
-        (glitter sq-2-3)
+        (at agent sq-1-3)
+        (exists ?adj and)
         (not
           (dead agent)
         )
@@ -173,53 +127,7 @@
       (and
         (have agent the-gold)
         (not
-          (glitter sq-2-3)
-        )
-      )
-  )
-
-    (:action move
-    :parameters (agent sq-2-3 sq-1-3)
-    :precondition
-      (and
-        (adj sq-2-3 sq-1-3)
-        (not
-          (pit sq-1-3)
-        )
-        (at agent sq-2-3)
-        (not
-          (dead agent)
-        )
-        (not
-          (wumpus sq-1-3)
-        )
-      )
-    :effect
-      (and
-        (not
-          (at agent sq-2-3)
-        )
-        (at agent sq-1-3)
-        (visited sq-1-3)
-        (when
-          (pit sq-1-3)
-          (dead agent)
-        )
-        (when
-          (wumpus sq-1-3)
-          (dead agent)
-        )
-        (when
           (gold sq-1-3)
-          (glitter sq-1-3)
-        )
-        (when
-          (exists ?adj and)
-          (breeze sq-1-3)
-        )
-        (when
-          (exists ?adj and)
-          (stench sq-1-3)
         )
       )
   )
@@ -256,7 +164,7 @@
           (dead agent)
         )
         (when
-          (gold sq-1-2)
+          (exists ?adj and)
           (glitter sq-1-2)
         )
         (when
@@ -302,7 +210,7 @@
           (dead agent)
         )
         (when
-          (gold sq-1-1)
+          (exists ?adj and)
           (glitter sq-1-1)
         )
         (when
@@ -315,5 +223,3 @@
         )
       )
   )
-
-  

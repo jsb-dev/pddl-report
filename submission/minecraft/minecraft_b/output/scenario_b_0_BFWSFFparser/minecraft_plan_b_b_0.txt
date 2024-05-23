@@ -1,24 +1,86 @@
   (:action move
-    :parameters (loc-3-3 loc-0-2)
+    :parameters (loc-1-2 loc-0-2 agent)
     :precondition
       (and
         (agentat loc-0-2)
+        (adjacent loc-0-2 loc-1-2)
+        (not
+          (agentat loc-1-2)
+        )
       )
     :effect
       (and
-        (agentat loc-3-3)
+        (agentat loc-1-2)
         (not
           (agentat loc-0-2)
         )
       )
   )
 
+    (:action move
+    :parameters (loc-2-2 loc-1-2 agent)
+    :precondition
+      (and
+        (agentat loc-1-2)
+        (adjacent loc-1-2 loc-2-2)
+        (not
+          (agentat loc-2-2)
+        )
+      )
+    :effect
+      (and
+        (agentat loc-2-2)
+        (not
+          (agentat loc-1-2)
+        )
+      )
+  )
+
+    (:action move
+    :parameters (loc-2-3 loc-2-2 agent)
+    :precondition
+      (and
+        (agentat loc-2-2)
+        (adjacent loc-2-2 loc-2-3)
+        (not
+          (agentat loc-2-3)
+        )
+      )
+    :effect
+      (and
+        (agentat loc-2-3)
+        (not
+          (agentat loc-2-2)
+        )
+      )
+  )
+
+    (:action move
+    :parameters (loc-3-3 loc-2-3 agent)
+    :precondition
+      (and
+        (agentat loc-2-3)
+        (adjacent loc-2-3 loc-3-3)
+        (not
+          (agentat loc-3-3)
+        )
+      )
+    :effect
+      (and
+        (agentat loc-3-3)
+        (not
+          (agentat loc-2-3)
+        )
+      )
+  )
+
     (:action pick
-    :parameters (grass-1 loc-3-3)
+    :parameters (grass-1 loc-3-3 agent)
     :precondition
       (and
         (at grass-1 loc-3-3)
         (agentat loc-3-3)
+        (handsfree agent)
       )
     :effect
       (and
@@ -30,10 +92,14 @@
   )
 
     (:action move
-    :parameters (loc-3-2 loc-3-3)
+    :parameters (loc-3-2 loc-3-3 agent)
     :precondition
       (and
         (agentat loc-3-3)
+        (adjacent loc-3-3 loc-3-2)
+        (not
+          (agentat loc-3-2)
+        )
       )
     :effect
       (and
@@ -45,11 +111,12 @@
   )
 
     (:action pick
-    :parameters (log-2 loc-3-2)
+    :parameters (log-2 loc-3-2 agent)
     :precondition
       (and
         (at log-2 loc-3-2)
         (agentat loc-3-2)
+        (handsfree agent)
       )
     :effect
       (and
@@ -61,34 +128,113 @@
   )
 
     (:action move
-    :parameters (loc-1-1 loc-3-2)
+    :parameters (loc-2-2 loc-3-2 agent)
     :precondition
       (and
         (agentat loc-3-2)
+        (adjacent loc-3-2 loc-2-2)
+        (not
+          (agentat loc-2-2)
+        )
       )
     :effect
       (and
-        (agentat loc-1-1)
+        (agentat loc-2-2)
         (not
           (agentat loc-3-2)
         )
       )
   )
 
-    (:action craftplank
+    (:action move
+    :parameters (loc-1-2 loc-2-2 agent)
+    :precondition
+      (and
+        (agentat loc-2-2)
+        (adjacent loc-2-2 loc-1-2)
+        (not
+          (agentat loc-1-2)
+        )
+      )
+    :effect
+      (and
+        (agentat loc-1-2)
+        (not
+          (agentat loc-2-2)
+        )
+      )
+  )
+
+    (:action move
+    :parameters (loc-1-1 loc-1-2 agent)
+    :precondition
+      (and
+        (agentat loc-1-2)
+        (adjacent loc-1-2 loc-1-1)
+        (not
+          (agentat loc-1-1)
+        )
+      )
+    :effect
+      (and
+        (agentat loc-1-1)
+        (not
+          (agentat loc-1-2)
+        )
+      )
+  )
+
+    (:action recall
     :parameters (log-2 agent)
     :precondition
       (and
-        (islog log-2)
         (inventory log-2)
         (handsfree agent)
       )
     :effect
       (and
-        (inventory log-2)
+        (recall log-2)
+        (not
+          (inventory log-2)
+        )
+      )
+  )
+
+    (:action equip
+    :parameters (log-2 agent)
+    :precondition
+      (and
+        (recall log-2)
+        (handsfree agent)
+      )
+    :effect
+      (and
+        (equipped log-2 agent)
+        (not
+          (handsfree agent)
+        )
+        (not
+          (recall log-2)
+        )
+      )
+  )
+
+    (:action craftplanks
+    :parameters (log-2 agent)
+    :precondition
+      (and
+        (islog log-2)
+        (equipped log-2 agent)
+      )
+    :effect
+      (and
         (isplanks log-2)
         (not
           (islog log-2)
         )
+        (not
+          (equipped log-2 agent)
+        )
+        (handsfree agent)
       )
   )
