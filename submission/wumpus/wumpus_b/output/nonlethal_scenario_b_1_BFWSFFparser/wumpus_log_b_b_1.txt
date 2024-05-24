@@ -18,8 +18,8 @@ Starting search with 1-BFWS...
 --[2 / 6]--
 --[0 / 0]--
 --[0 / 2]--
-Total time: 0.000134999
+Total time: 0.000129
 Nodes generated during search: 21
 Nodes expanded during search: 8
 Plan found with cost: 5
-Fast-BFS search completed in 0.000134999 secs
+Fast-BFS search completed in 0.000129 secs

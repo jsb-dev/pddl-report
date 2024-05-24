@@ -1,0 +1,5 @@
+I worked on the project repo in WSL while using Word for the report file. 
+
+The files in this directory aren't necessary to the implementation and were only left in for reference.
+
+Please feel free to ignore.

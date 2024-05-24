@@ -1,0 +1,21 @@
+NOTES FROM THE DEVELOPER
+
+`/wumpus_a` contains the original problem/domain PDDL pair provided with the assessment criteria.
+
+
+`/wumpus_b` contains the modified problem/domain PDDL pair for the Wumpus world problem, where I performed a similar analysis.
+
+HOW DOES IT WORK?
+
+`wumpus_domain_b.pddl` and `wumpus_problem_b.pddl` are the domain and problem files. I treated the lethal scenario as the default scenario to help with managing the project.
+The analysis includes alternating scenarios with LAMA-first as the recurring solver.
+
+`/lethal_scenario_a_0_LAMAfirstsatisficingplanner` - Original scenario, original solver
+
+`/nonlethal_scenario_b_0_LAMAfirstsatisficingplanner` - Alternate scenario, original solver
+
+`/nonlethal_scenario_b_1_BFWSFFparser` - Alternate scenario (see the comment-toggle in the problem file), alternate solver
+
+Each contains a log and a plan file. Both are basic .txt files. The log documents the solver's output, the plan contains the corresponding action sequence.
+
+If you would like to test the solution, I recommend visiting https://editor.planning.domains/# and running the files there.

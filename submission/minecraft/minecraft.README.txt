@@ -1,0 +1,27 @@
+NOTES FROM THE DEVELOPER
+
+`/minecraft_a` contains the original problem/domain PDDL pair for a problem found at the assessment-outlined repo. 
+The original problem file can be found here: https://github.com/tomsilver/pddlgym/blob/master/pddlgym/pddl/minecraft/problem0.pddl
+
+
+`/minecraft_b` contains the modified problem/domain PDDL pair for the same problem. I interpreted the original `craftplanks` action literals as an intended
+representation of a specific goal-state, which is reflected in the problem definition. I thoroughly simplified the problem complexity for testing, manageability,
+and demonstrative purposes.
+
+HOW DOES IT WORK?
+
+`minecraft_domain_b.pddl` and `minecraft_problem_b.pddl` are the domain and problem files, respectively. The domain file contains the action definitions, predicates, types, 
+etc., and the problem file contains the initial state and goal state definitions.
+
+The solution output is included for 3 different configurations:
+
+`/scenario_a_0_BFWSFFparser` - Original scenario, original solver
+
+`/scenario_a_1_LAMAfirstsatisficingplanner` - Original scenario, alternate solver
+
+`/scenario_b_0_BFWSFFparser` - Alternate scenario (see the comment-toggle in the problem file), original solver
+
+Each contains a log and a plan file. Both are basic .txt files. The log documents the solver's output, the plan contains the corresponding action sequence.
+
+If you would like to test the solution, I recommend visiting https://editor.planning.domains/# and running the files there. It's a free editor you can run in the browser,
+and it contains the necessary + additional solvers to replicate/tweak output.

@@ -1,4 +1,6 @@
 (define (domain wumpus_domain_b)
+    ; This domain uses more features than the minecraft domain
+    ; Certain effects are conditionally inferred to streamline the expression of certain consequences
     (:requirements :strips :typing :negative-preconditions :conditional-effects :existential-preconditions)
     (:types
         square what who

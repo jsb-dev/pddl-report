@@ -1,8 +1,11 @@
 (define (domain minecraft_domain_b)
+    ; Include STRIPS, TYPING, and NEGATIVE-PRECONDITIONS features - these are PDDL structures
+    ; Not all are strictly necessary for working output, but they all enforce better definition formality standards
     (:requirements :strips :typing :negative-preconditions)
     (:types
         moveable static agent
     )
+
     (:predicates
         (islog ?arg0 - moveable)
         (isplanks ?arg0 - moveable)

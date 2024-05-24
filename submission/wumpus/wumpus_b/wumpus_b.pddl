@@ -59,11 +59,14 @@
         ; Gold
         (gold sq-2-3)
 
-        ; Initial pits
+        ; / ------------- This problem contains two scenarios ------------- /
+
+        ; Initial problem
         (pit sq-3-1)
         (pit sq-4-4)
 
-        ; Additional pits to force a confrontation
+        ; Toggle to change the initial state
+        ; Include these to force a confrontation with the wumpus
         ; (pit sq-2-1)
         ; (pit sq-2-2)
 

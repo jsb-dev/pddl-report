@@ -10,13 +10,15 @@
     (:init
         (islog log-2)
 
+        ; / ------------- This problem contains two scenarios ------------- /
+
         ; Toggle to change the initial state
-        ; Initial problem
+        ; Initial problem - leave these out for the alternate scenario
         (at grass-0 loc-2-2)
         (at grass-1 loc-0-0)
         (at log-2 loc-3-0)
 
-        ; Alternate Scenario
+        ; Alternate Scenario - include these for the alternate scenario
         ; (at grass-0 loc-2-1)
         ; (at grass-1 loc-3-3)
         ; (at log-2 loc-3-2)
